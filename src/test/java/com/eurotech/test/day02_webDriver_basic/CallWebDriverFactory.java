@@ -21,14 +21,14 @@ public class CallWebDriverFactory {
         driver.get("http://eurotech.study/");
         String expectedTitle = "DevEx";
         String actualTitle = driver.getTitle();
-        if (expectedTitle.equals(actualTitle)) {
+        if(expectedTitle.equals(actualTitle)){
             System.out.println("PASSED");
-        } else {
+        }else{
             System.out.println("FAILED");
         }
 
-        //Thread.sleep(2000);
-        //driver.close();
+        Thread.sleep(2000);
+        driver.close();
 
     }
 }
