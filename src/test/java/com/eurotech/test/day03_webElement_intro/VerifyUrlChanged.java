@@ -29,10 +29,12 @@ public class VerifyUrlChanged {
         //enter email
         WebElement emailInputBox = driver.findElement(By.id("loginpage-input-email"));
         emailInputBox.sendKeys(email);
+        Thread.sleep(2000);
 
         //enter password
         WebElement passwordInputBox = driver.findElement(By.name("password"));
         passwordInputBox.sendKeys(password);
+        Thread.sleep(2000);
 
         //click on login button
         WebElement loginBtn = driver.findElement(By.id("loginpage-form-btn"));
