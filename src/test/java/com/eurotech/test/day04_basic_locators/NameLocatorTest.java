@@ -12,7 +12,7 @@ public class NameLocatorTest {
         driver.manage().window().maximize();
 
 
-        WebElement understandBtn = driver.findElement(By.id("rcc-confirm-button"));
+        WebElement understandBtn = driver.findElement(By.id("rcc-confirm-button"));//cerez icin
         understandBtn.click();
 
         WebElement emailInputBox = driver.findElement(By.name("email"));
