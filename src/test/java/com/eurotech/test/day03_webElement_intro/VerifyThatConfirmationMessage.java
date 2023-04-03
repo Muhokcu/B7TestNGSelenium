@@ -17,9 +17,9 @@ public class VerifyThatConfirmationMessage {
          * */
 
 
-        String email="eurotech@gmail.com";
-        String password="Test12345!";
-        String expectedText="Welcome Teacher";
+        String email = "eurotech@gmail.com";
+        String password = "Test12345!";
+        String expectedText = "Welcome Teacher";
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://eurotech.study/login");
@@ -28,14 +28,17 @@ public class VerifyThatConfirmationMessage {
         understandBtn.click();
 
 
-
         //enter email
         WebElement emailInputBox = driver.findElement(By.id("loginpage-input-email"));
         emailInputBox.sendKeys(email);
+        Thread.sleep(2000);
+
 
         //enter password
         WebElement passwordInputBox = driver.findElement(By.name("password"));
         passwordInputBox.sendKeys(password);
+        Thread.sleep(2000);
+
 
         //click on login button
         WebElement loginBtn = driver.findElement(By.id("loginpage-form-btn"));
@@ -50,13 +53,13 @@ public class VerifyThatConfirmationMessage {
         String actulText = welcomeText.getText();
 
 
-        if(expectedText.equals(actulText)){
+        if (expectedText.equals(actulText)) {
             System.out.println("PASSED");
-        }else{
+        } else {
             System.out.println("FAILED");
         }
 
         Thread.sleep(2000);
-      //  driver.close();
+        driver.close();
     }
 }

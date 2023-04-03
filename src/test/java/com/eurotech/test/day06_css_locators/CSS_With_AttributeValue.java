@@ -22,6 +22,6 @@ public class CSS_With_AttributeValue {
         driver.findElement(By.cssSelector("[class='btn btn-primary']")).click();
 
         Thread.sleep(2000);
-        driver.close();
+        //driver.close();
     }
 }

@@ -16,11 +16,12 @@ public class AmazonTask {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.get("https://www.amazon.co.uk/");
+        driver.manage().window().maximize();
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("//input[@name='accept']")).click();
 
-        String product="Selenium";
+        String product="nike schuhe";
 
         driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys(product);
 
@@ -36,7 +37,7 @@ public class AmazonTask {
             System.out.println("FAILED");
         }
 
-        driver.close();
+      //  driver.close();
 
 
     }

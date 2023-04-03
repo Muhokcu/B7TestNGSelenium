@@ -36,7 +36,7 @@ public class GetTitleAndGetUrl {
         System.out.println("currentUrl = " + currentUrl);
         // get the source of the page
         String pageSource = driver.getPageSource();
-        System.out.println("pageSource = " + pageSource);
+        //System.out.println("pageSource = " + pageSource);
 
     }
 }

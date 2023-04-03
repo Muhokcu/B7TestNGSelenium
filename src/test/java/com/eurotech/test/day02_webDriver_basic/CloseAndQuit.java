@@ -18,4 +18,5 @@ public class CloseAndQuit {
         Thread.sleep(2000);
         driver.quit();//close all taps // butun sayfalri kapatir
     }
+
 }

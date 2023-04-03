@@ -44,6 +44,7 @@ public class VerifyUrlChanged {
 
         //verify that url has changed
         String expectedUrl="http://eurotech.study/dashboard";
+        System.out.println("expectedUrl = " + expectedUrl);
         String actualUrl=driver.getCurrentUrl();
         System.out.println("actualUrl = " + actualUrl);
 

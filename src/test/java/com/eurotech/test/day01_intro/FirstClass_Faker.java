@@ -12,6 +12,9 @@ public class FirstClass_Faker {
         for (int i = 0; i < 100; i++) {
             System.out.println(i + "-faker.address().country() = " + faker.address().country());
 
+
+
+
         }
 
 

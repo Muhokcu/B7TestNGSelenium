@@ -25,6 +25,7 @@ public class CSS_With_Class {
         //CSS with class (with space)
         driver.findElement(By.cssSelector(".btn.btn-primary")).click();
 
+
         Thread.sleep(2000);
 
         driver.close();

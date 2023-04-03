@@ -13,11 +13,11 @@ public class GetAttribute {
         WebElement understandBtn = driver.findElement(By.id("rcc-confirm-button"));
         understandBtn.click();
 
-        String email="eurotech@gmail.com";
+        String email = "eurotech@gmail.com";
 
         Thread.sleep(2000);
 
-        WebElement  emailInputBox= driver.findElement(By.id("loginpage-input-email"));
+        WebElement emailInputBox = driver.findElement(By.id("loginpage-input-email"));
         emailInputBox.sendKeys(email);
 
         Thread.sleep(2000);
