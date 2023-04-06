@@ -10,12 +10,13 @@ import java.util.List;
 
 public abstract class BasePage {
 
+
     public BasePage() {
-        PageFactory.initElements(Driver.get(),this);// web elementlerin baslamasi icin gerekli
+        PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(id = "rcc-confirm-button")
-    public WebElement understandBtn;
+    //    @FindBy(id = "rcc-confirm-button")
+//    public WebElement understandBtn;
     @FindBy(className = "nav__menu-item")
     public List<WebElement> menuList;
 
@@ -26,8 +27,12 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[text()='My Account']")
     public WebElement myAccount;
 
-    public void navigateToMenu(String subMenu){
-        Driver.get().findElement(By.xpath("//*[text()='"+subMenu+"']")).click();
+    public void navigateToMenu(String menuName) {
+        Driver.get().findElement(By.xpath("//*[text()='" + menuName + "']")).click();
+    }
+
+    public void navigateToSubmenu(String subMenu) {
+        Driver.get().findElement(By.xpath("//span[text()='" + subMenu + "']")).click();
     }
 
 }

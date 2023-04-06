@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
     // no need more because
     //    public LoginPage() {
     //        PageFactory.initElements(Driver.get(), this);
@@ -18,6 +18,7 @@ public class LoginPage extends BasePage{
     public WebElement usernameInput;
     @FindBy(id = "loginpage-form-pw-input")
     public WebElement passwordInput;
+
     @FindBy(id = "loginpage-form-btn")
     public WebElement loginBtn;
     @FindBy(xpath = "//*[.='Invalid Credentials!']")
