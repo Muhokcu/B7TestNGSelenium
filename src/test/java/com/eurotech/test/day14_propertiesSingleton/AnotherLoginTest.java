@@ -20,7 +20,7 @@ public class AnotherLoginTest extends TestBase {
 
     @Test
     public void testName() {
-        driver.get(ConfigurationReader.get("url"));
+        driver.get(ConfigurationReader.get("url"));//url i okumak icin burayi kullaniyoruz
         WebElement usernameInput = driver.findElement(By.id("loginpage-input-email"));
         WebElement passwordInput = driver.findElement(By.id("loginpage-form-pw-input"));
         usernameInput.sendKeys(ConfigurationReader.get("usernameTeacher"));

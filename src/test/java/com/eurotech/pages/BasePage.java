@@ -13,10 +13,8 @@ public abstract class BasePage {
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
-    }
-
-    //    @FindBy(id = "rcc-confirm-button")
-//    public WebElement understandBtn;
+    }//    @FindBy(id = "rcc-confirm-button")
+    //    public WebElement understandBtn;
     @FindBy(className = "nav__menu-item")
     public List<WebElement> menuList;
 
@@ -35,4 +33,8 @@ public abstract class BasePage {
         Driver.get().findElement(By.xpath("//span[text()='" + subMenu + "']")).click();
     }
 
+    public String getCommonText(String element) {
+        return Driver.get().findElement(By.xpath("//td[text()='" + element + "']")).getText();
+
+    }
 }

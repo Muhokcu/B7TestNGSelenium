@@ -36,6 +36,9 @@ public class PropertiesTest1 {
         driver1.get("https://www.amazon.co.uk/");
 
         WebDriver driver2=WebDriverFactory.getDriver("chrome");
+        //driver1.findElement(By.className("//span[@class='a-button a-spacing-top-base a-button-base glow-toaster-button glow-toaster-button-dismiss']")).click();
+
+        driver2.findElement(By.className("//input[@class='a-button-input']")).click();
         driver2.findElement(By.id("sp-cc-accept")).click();
     }
 

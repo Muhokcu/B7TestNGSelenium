@@ -46,7 +46,7 @@ public class VerifyUserInfo extends TestBase {
         Assert.assertEquals(driver.getCurrentUrl(), "http://eurotech.study/dashboard");
 
         //2 way t verify log in successfully
-        String expectedMessage="Welcome Teacher";
+        String expectedMessage=" Welcome Teacher";
         extentLogger.info("Verify that login is successful from dashboard Page and message is " + expectedMessage);
         String actualMessage=dashboardPage.welcomeMessage.getText();
         System.out.println("actualMessage = " + actualMessage);
@@ -55,14 +55,14 @@ public class VerifyUserInfo extends TestBase {
         extentLogger.info("Click on Edit profile button");
         dashboardPage.navigateToMenu("Edit Profile");
 
-        String expectedGithubUsername="eurotech2022";
+        String expectedGithubUsername="eurotech2023";
         extentLogger.info("Verify that github username is " + expectedGithubUsername);
         Assert.assertEquals(profilePage.githubusername.getAttribute("value"),expectedGithubUsername);
 
         extentLogger.info("Click on go back button");
         profilePage.goBackBnt.click();
 
-        String expectedJobTitle="Director";
+        String expectedJobTitle="Teacher";
         extentLogger.info("Verify that user's title is " + expectedJobTitle);
         Assert.assertEquals(dashboardPage.jobTitle.getText(),expectedJobTitle);
 
